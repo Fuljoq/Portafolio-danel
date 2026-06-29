@@ -221,6 +221,23 @@ export const professionalProjects = [
     },
     link: "#",
     isYoutube: true
+  },
+  {
+    id: 8,
+    title: {
+      es: "Spot publicitario",
+      en: "Advertising Spot"
+    },
+    video: "https://www.instagram.com/p/DZI45timDYO/",
+    image: "/images/ig_DZI45timDYO.jpg",
+    tags: ["Motion graphics", "Subtitulado", "Montaje dinámico", "Edición compleja"],
+    clipInfo: {
+      es: "Trabajo realizado: corrección de color y corte",
+      en: "Work done: color correction and editing"
+    },
+    clipLink: "https://www.instagram.com/p/DZI45timDYO/",
+    link: "#",
+    isInstagram: true
   }
 ];
 
@@ -256,5 +273,56 @@ export const irlProjects = [
     },
     link: "#",
     isYoutube: true
+  },
+  {
+    id: 9,
+    title: {
+      es: "Vlog de venta",
+      en: "Selling Vlog"
+    },
+    video: "https://www.instagram.com/reel/DZ-2YCHOcBh/",
+    image: "/images/ig_DZ-2YCHOcBh.jpg",
+    tags: ["Motion graphics", "Montaje dinámico", "Edición simple"],
+    clipInfo: {
+      es: "Trabajo realizado: corte y subtitulado",
+      en: "Work done: cutting and subtitling"
+    },
+    clipLink: "https://www.instagram.com/reel/DZ-2YCHOcBh/",
+    link: "#",
+    isInstagram: true
+  },
+  {
+    id: 10,
+    title: {
+      es: "Vlog de venta 2",
+      en: "Selling Vlog"
+    },
+    video: "https://www.instagram.com/reel/DaIq_1Vtp4a/",
+    image: "/images/ig_DaIq_1Vtp4a.jpg",
+    tags: ["Motion graphics", "Montaje dinámico", "Edición simple"],
+    clipInfo: {
+      es: "Trabajo realizado: corte y subtitulado",
+      en: "Work done: cutting and subtitling"
+    },
+    clipLink: "https://www.instagram.com/reel/DaIq_1Vtp4a/",
+    link: "#",
+    isInstagram: true
+  },
+  {
+    id: 11,
+    title: {
+      es: "Vlog de venta 3",
+      en: "Selling Vlog"
+    },
+    video: "https://www.instagram.com/reel/DZvZzd_uxlm/",
+    image: "/images/ig_DZvZzd_uxlm.jpg",
+    tags: ["Motion graphics", "Montaje dinámico", "Edición simple"],
+    clipInfo: {
+      es: "Trabajo realizado: corte y subtitulado",
+      en: "Work done: cutting and subtitling"
+    },
+    clipLink: "https://www.instagram.com/reel/DZvZzd_uxlm/",
+    link: "#",
+    isInstagram: true
   }
 ];

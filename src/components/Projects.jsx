@@ -54,10 +54,19 @@ export default function Projects() {
     return (match && match[2].length === 11) ? match[2] : null;
   };
 
+  const getInstagramId = (url) => {
+    if (!url) return null;
+    const match = url.match(/instagram\.com\/(?:p|reel|tv)\/([^/?#]+)/);
+    return match ? match[1] : null;
+  };
+
   const openModal = (project) => {
     if (project.isYoutube) {
       const videoId = getYouTubeId(project.video);
       project.videoUrl = `https://www.youtube.com/embed/${videoId}?autoplay=1`;
+    } else if (project.isInstagram) {
+      const shortcode = getInstagramId(project.video);
+      project.videoUrl = `https://www.instagram.com/reel/${shortcode}/embed/`;
     }
     setSelectedVideo(project);
     document.body.style.overflow = 'hidden';
@@ -200,10 +209,11 @@ export default function Projects() {
                   {/* Tags */}
                   <div className="flex flex-wrap gap-2">
                     {project.tags.filter(tag => {
-                      if (language === 'es') {
-                        return ['Manualidad', 'Arte', 'Artesania', 'Trabajo', 'League of Legends', 'Humor', 'Anecdota', 'Streaming', 'Edicion simple', 'Edicion compleja'].includes(tag);
-                      }
-                      return ['Craft', 'Art', 'Handicraft', 'Work', 'Humor', 'Streaming', 'Simple Editing', 'Complex Editing'].includes(tag);
+                      const esTags = ['Manualidad', 'Arte', 'Artesania', 'Trabajo', 'League of Legends', 'Humor', 'Anecdota', 'Streaming', 'Edicion simple', 'Edicion compleja'];
+                      const enTags = ['Craft', 'Art', 'Handicraft', 'Work', 'Humor', 'Streaming', 'Simple Editing', 'Complex Editing'];
+                      // Tags personalizados (no traducidos) se muestran siempre
+                      if (!esTags.includes(tag) && !enTags.includes(tag)) return true;
+                      return (language === 'es' ? esTags : enTags).includes(tag);
                     }).map((tag, i) => (
                       <span key={i} className="px-2.5 py-1 bg-purple-500/10 text-purple-300 rounded-md text-xs font-medium border border-purple-500/10">
                         {tag}
@@ -221,7 +231,7 @@ export default function Projects() {
       {/* Video Modal */}
       {selectedVideo && (
         <div className="fixed inset-0 bg-black/90 backdrop-blur-sm z-50 flex items-center justify-center p-4" onClick={closeModal}>
-          <div className="relative w-full max-w-4xl mx-auto" onClick={e => e.stopPropagation()}>
+          <div className={`relative w-full mx-auto ${selectedVideo.isInstagram ? 'max-w-[400px]' : 'max-w-4xl'}`} onClick={e => e.stopPropagation()}>
             <button
               onClick={closeModal}
               className="absolute -top-12 right-0 text-gray-400 hover:text-white transition-colors p-2"
@@ -230,17 +240,32 @@ export default function Projects() {
               <X size={24} />
             </button>
 
-            <div className="relative pt-[56.25%] w-full rounded-xl overflow-hidden">
-              <iframe
-                src={selectedVideo.videoUrl}
-                className="absolute top-0 left-0 w-full h-full"
-                frameBorder="0"
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                allowFullScreen
-                title={typeof selectedVideo.title === 'object' ? selectedVideo.title[language] : selectedVideo.title}
-                loading="lazy"
-              />
-            </div>
+            {selectedVideo.isInstagram ? (
+              <div className="relative w-full rounded-xl overflow-hidden bg-white" style={{ height: '80vh' }}>
+                <iframe
+                  src={selectedVideo.videoUrl}
+                  className="absolute top-0 left-0 w-full h-full"
+                  frameBorder="0"
+                  scrolling="no"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                  allowFullScreen
+                  title={typeof selectedVideo.title === 'object' ? selectedVideo.title[language] : selectedVideo.title}
+                  loading="lazy"
+                />
+              </div>
+            ) : (
+              <div className="relative pt-[56.25%] w-full rounded-xl overflow-hidden">
+                <iframe
+                  src={selectedVideo.videoUrl}
+                  className="absolute top-0 left-0 w-full h-full"
+                  frameBorder="0"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                  allowFullScreen
+                  title={typeof selectedVideo.title === 'object' ? selectedVideo.title[language] : selectedVideo.title}
+                  loading="lazy"
+                />
+              </div>
+            )}
 
             <div className="mt-4 text-center">
               <p className="text-white font-semibold text-lg">
