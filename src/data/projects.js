@@ -19,6 +19,7 @@ export const streamingProjects = [
       en: "Clip by Fuvu and Danez43"
     },
     clipLink: "https://www.instagram.com/p/DOW2dsAgXpJ/",
+    creator: "danez",
     link: "#",
     isYoutube: true,
     format: "short"
@@ -33,38 +34,40 @@ export const streamingProjects = [
       es: "Ejemplo 2",
       en: "Example 2"
     },
-    video: "https://www.youtube.com/watch?v=M1983cFqy4Y",
-    image: "/images/loli_mafiosa_miniatura.jpg",
+    video: "https://www.instagram.com/reel/DQaJTg8Dov_/",
+    image: "/images/Sana-susto-miniatura0.png",
     tags: ["Streaming", "Humor"],
     clipInfo: {
       es: "Clip de Sana",
       en: "Clip by Sana"
     },
-    clipLink: "https://www.tiktok.com/@sana.numachi/video/7557068799338450187",
+    clipLink: "https://www.instagram.com/reel/DQaJTg8Dov_/",
+    creator: "sana",
     link: "#",
-    isYoutube: true,
+    videoFile: "/videos/ig_DQaJTg8Dov_.mp4",
     format: "short"
   },
   {
     id: 9,
     title: {
-      es: "Clip Destacado de Cocoggy",
-      en: "Featured Clip from Cocoggy"
+      es: "Clip Destacado de Zago",
+      en: "Featured Clip from Zago"
     },
     category: {
       es: "Ejemplo 3",
       en: "Example 3"
     },
-    video: "https://www.youtube.com/shorts/ND25f4lcfeI",
-    image: "https://img.youtube.com/vi/ND25f4lcfeI/maxresdefault.jpg",
+    video: "https://www.instagram.com/p/Da6IbbDlbHG/",
+    image: "/images/ig_Da6IbbDlbHG.jpg",
     tags: ["Streaming", "Humor"],
     clipInfo: {
-      es: "Clip de Cocoggy",
-      en: "Clip by Cocoggy"
+      es: "Clip de Zago",
+      en: "Clip by Zago"
     },
-    clipLink: "https://www.tiktok.com/@cocoggy/video/7601944378000575756",
+    clipLink: "https://www.instagram.com/p/Da6IbbDlbHG/",
+    creator: "zago",
     link: "#",
-    isYoutube: true,
+    videoFile: "/videos/ig_Da6IbbDlbHG.mp4",
     format: "short"
   },
   {
@@ -85,28 +88,7 @@ export const streamingProjects = [
       en: "Clip by Danez43"
     },
     clipLink: "https://www.instagram.com/p/DSddWTkgsq_/",
-    link: "#",
-    isYoutube: true,
-    format: "short"
-  },
-  {
-    id: 3,
-    title: {
-      es: "Clip Destacado de Fuvu",
-      en: "Featured Clip from Fuvu"
-    },
-    category: {
-      es: "Ejemplo 5",
-      en: "Example 5"
-    },
-    video: "https://www.youtube.com/watch?v=zzoIKLQhoqU",
-    image: "/images/fuvu perro.jpg",
-    tags: ["Anecdota", "Humor"],
-    clipInfo: {
-      es: "Clip de Fuvu",
-      en: "Clip by Fuvu"
-    },
-    clipLink: "https://www.tiktok.com/@fuvu_vt",
+    creator: "danez",
     link: "#",
     isYoutube: true,
     format: "short"
@@ -129,6 +111,7 @@ export const streamingProjects = [
       en: "Clip by Danez43"
     },
     clipLink: "https://www.instagram.com/p/DPUZxSuARZz/",
+    creator: "danez",
     link: "#",
     isYoutube: true,
     format: "short"
@@ -198,6 +181,97 @@ export const streamingProjects = [
     link: "#",
     isYoutube: true,
     format: "video"
+  },
+  {
+    id: 20,
+    title: { es: "Clip de Zago 2", en: "Clip by Zago 2" },
+    video: "https://www.instagram.com/p/DZx-yF_B5eE/",
+    image: "/images/ig_DZx-yF_B5eE.jpg",
+    tags: ["Streaming", "Humor"],
+    clipInfo: { es: "Clip de Zago", en: "Clip by Zago" },
+    clipLink: "https://www.instagram.com/p/DZx-yF_B5eE/",
+    link: "#",
+    videoFile: "/videos/ig_DZx-yF_B5eE.mp4",
+    creator: "zago",
+    format: "short"
+  },
+  {
+    id: 21,
+    title: { es: "Clip de Zago 3", en: "Clip by Zago 3" },
+    video: "https://www.instagram.com/p/DYp4lHqhmCb/",
+    image: "/images/ig_DYp4lHqhmCb.jpg",
+    tags: ["Streaming", "Humor"],
+    clipInfo: { es: "Clip de Zago", en: "Clip by Zago" },
+    clipLink: "https://www.instagram.com/p/DYp4lHqhmCb/",
+    link: "#",
+    videoFile: "/videos/ig_DYp4lHqhmCb.mp4",
+    creator: "zago",
+    format: "short"
+  },
+  {
+    id: 22,
+    title: { es: "Clip de Sana 2", en: "Clip by Sana 2" },
+    video: "https://www.instagram.com/p/DQcgQc5DnVA/",
+    image: "/images/ig_DQcgQc5DnVA.jpg",
+    tags: ["Streaming", "Humor"],
+    clipInfo: { es: "Clip de Sana", en: "Clip by Sana" },
+    clipLink: "https://www.instagram.com/p/DQcgQc5DnVA/",
+    link: "#",
+    videoFile: "/videos/ig_DQcgQc5DnVA.mp4",
+    creator: "sana",
+    format: "short"
+  },
+  {
+    id: 23,
+    title: { es: "Clip de Sana 3", en: "Clip by Sana 3" },
+    video: "https://www.instagram.com/p/DPHUI47jiKP/",
+    image: "/images/ig_DPHUI47jiKP.jpg",
+    tags: ["Streaming", "Humor"],
+    clipInfo: { es: "Clip de Sana", en: "Clip by Sana" },
+    clipLink: "https://www.instagram.com/p/DPHUI47jiKP/",
+    link: "#",
+    videoFile: "/videos/ig_DPHUI47jiKP.mp4",
+    creator: "sana",
+    format: "short"
+  },
+  {
+    id: 24,
+    title: { es: "Clip Destacado de Fuvu", en: "Featured Clip from Fuvu" },
+    video: "https://www.instagram.com/p/DS0gV1zCKcd/",
+    image: "/images/ig_DS0gV1zCKcd.jpg",
+    tags: ["Streaming", "Humor"],
+    clipInfo: { es: "Clip de Fuvu", en: "Clip by Fuvu" },
+    clipLink: "https://www.instagram.com/p/DS0gV1zCKcd/",
+    link: "#",
+    videoFile: "/videos/ig_DS0gV1zCKcd.mp4",
+    creator: "fuvu",
+    format: "short"
+  },
+  {
+    id: 25,
+    title: { es: "Clip de Fuvu 2", en: "Clip by Fuvu 2" },
+    video: "https://www.instagram.com/p/DPmkxeYkeMi/",
+    image: "/images/ig_DPmkxeYkeMi.jpg",
+    tags: ["Streaming", "Humor"],
+    clipInfo: { es: "Clip de Fuvu", en: "Clip by Fuvu" },
+    clipLink: "https://www.instagram.com/p/DPmkxeYkeMi/",
+    link: "#",
+    videoFile: "/videos/ig_DPmkxeYkeMi.mp4",
+    creator: "fuvu",
+    format: "short"
+  },
+  {
+    id: 26,
+    title: { es: "Clip de Fuvu 3", en: "Clip by Fuvu 3" },
+    video: "https://www.instagram.com/p/DTYoBbhCGVm/",
+    image: "/images/ig_DTYoBbhCGVm.jpg",
+    tags: ["Streaming", "Humor"],
+    clipInfo: { es: "Clip de Fuvu", en: "Clip by Fuvu" },
+    clipLink: "https://www.instagram.com/p/DTYoBbhCGVm/",
+    link: "#",
+    videoFile: "/videos/ig_DTYoBbhCGVm.mp4",
+    creator: "fuvu",
+    format: "short"
   }
 ];
 
@@ -220,7 +294,8 @@ export const professionalProjects = [
       en: "Professional Clip"
     },
     link: "#",
-    isYoutube: true
+    isYoutube: true,
+    format: "cine"
   },
   {
     id: 8,
@@ -228,16 +303,55 @@ export const professionalProjects = [
       es: "Spot publicitario",
       en: "Advertising Spot"
     },
-    video: "https://www.instagram.com/p/DZI45timDYO/",
+    // El post de Instagram fue dado de baja: se reproduce el archivo local
+    videoFile: "/videos/papa-todo-terreno.mp4",
+    creator: "soymat",
     image: "/images/ig_DZI45timDYO.jpg",
     tags: ["Motion graphics", "Subtitulado", "Montaje dinámico", "Edición compleja"],
     clipInfo: {
       es: "Trabajo realizado: corrección de color y corte",
       en: "Work done: color correction and editing"
     },
-    clipLink: "https://www.instagram.com/p/DZI45timDYO/",
     link: "#",
-    isInstagram: true
+    format: "spot"
+  },
+  {
+    id: 12,
+    title: {
+      es: "Spot publicitario 2",
+      en: "Advertising Spot 2"
+    },
+    video: "https://www.instagram.com/p/DbOmZSuCARc/",
+    image: "/images/ig_DbOmZSuCARc.jpg",
+    tags: ["Publicidad", "Edición"],
+    clipInfo: {
+      es: "Cliente: @somossoymat",
+      en: "Client: @somossoymat"
+    },
+    clipLink: "https://www.instagram.com/p/DbOmZSuCARc/",
+    creator: "soymat",
+    link: "#",
+    videoFile: "/videos/ig_DbOmZSuCARc.mp4",
+    format: "spot"
+  },
+  {
+    id: 13,
+    title: {
+      es: "Spot publicitario 3",
+      en: "Advertising Spot 3"
+    },
+    video: "https://www.instagram.com/p/DbUOORJjIRt/",
+    image: "/images/ig_DbUOORJjIRt.jpg",
+    tags: ["Publicidad", "Edición"],
+    clipInfo: {
+      es: "Cliente: @somossoymat",
+      en: "Client: @somossoymat"
+    },
+    clipLink: "https://www.instagram.com/p/DbUOORJjIRt/",
+    creator: "soymat",
+    link: "#",
+    videoFile: "/videos/ig_DbUOORJjIRt.mp4",
+    format: "spot"
   }
 ];
 
@@ -289,7 +403,7 @@ export const irlProjects = [
     },
     clipLink: "https://www.instagram.com/reel/DZ-2YCHOcBh/",
     link: "#",
-    isInstagram: true
+    videoFile: "/videos/ig_DZ-2YCHOcBh.mp4"
   },
   {
     id: 10,
@@ -306,7 +420,7 @@ export const irlProjects = [
     },
     clipLink: "https://www.instagram.com/reel/DaIq_1Vtp4a/",
     link: "#",
-    isInstagram: true
+    videoFile: "/videos/ig_DaIq_1Vtp4a.mp4"
   },
   {
     id: 11,
@@ -323,6 +437,6 @@ export const irlProjects = [
     },
     clipLink: "https://www.instagram.com/reel/DZvZzd_uxlm/",
     link: "#",
-    isInstagram: true
+    videoFile: "/videos/ig_DZvZzd_uxlm.mp4"
   }
 ];
