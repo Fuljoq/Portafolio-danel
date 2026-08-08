@@ -96,6 +96,10 @@ const CREATORS = {
   },
 };
 
+// Orden en que se muestran los creadores. Los que no figuran acá van después,
+// respetando su orden de aparición.
+const CREATOR_ORDER = ['zago', 'fuvu', 'sana', 'danez'];
+
 // Agrupa los proyectos por creador, respetando el orden de aparición.
 // Los que no tienen creador quedan juntos al final, sin círculo.
 function groupByCreator(projects) {
@@ -110,8 +114,16 @@ function groupByCreator(projects) {
     }
     porClave.get(clave).projects.push(p);
   }
-  // Los sin creador siempre al final
-  return grupos.sort((a, b) => (a.key === '__sin_creador__' ? 1 : 0) - (b.key === '__sin_creador__' ? 1 : 0));
+  // Los sin creador siempre al final; el resto sigue CREATOR_ORDER
+  const rango = grupo => {
+    if (grupo.key === '__sin_creador__') return Infinity;
+    const i = CREATOR_ORDER.indexOf(grupo.key);
+    return i === -1 ? CREATOR_ORDER.length : i;
+  };
+  return grupos
+    .map((grupo, i) => ({ grupo, i }))
+    .sort((a, b) => rango(a.grupo) - rango(b.grupo) || a.i - b.i)
+    .map(({ grupo }) => grupo);
 }
 
 const PRO_SUBTABS = {
